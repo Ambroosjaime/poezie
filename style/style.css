@@ -1,12 +1,13 @@
 *{
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
+/*navigation*/
 nav {
   width: 80%;
   margin: 0 auto;
-  background: #fff;
   padding: 50px 0;
 }
 
@@ -22,7 +23,7 @@ nav ul li a {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #aaa;
+  color: white;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 10px;
@@ -78,10 +79,10 @@ nav.fill ul li a:hover:after {
   -moz-animation: fill 1s forwards;
   opacity: 1;
 }
+/*einde navigation*/
+
 
 /* intro text*/
-
-
 .intro {
   margin: 20px;
   padding: 40px;
@@ -89,5 +90,15 @@ nav.fill ul li a:hover:after {
 
 
 p {
-  color: #aaa;
+  color:white;
+	letter-spacing: .2em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	width: 40em;
+  margin: 0 0 0 -20em;
 }
