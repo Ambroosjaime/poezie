@@ -1,104 +1,74 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
+
+/**/
+html,body{
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: black;
+  padding: 0; 
+  font-family: 'Inconsolata', monospace;
+
 }
+/**/
 
 /*navigation*/
-nav {
-  width: 80%;
-  margin: 0 auto;
-  padding: 50px 0;
+.nav{
+  border-bottom: 1px solid #EAEAEB;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
 }
 
+.menu{
+  margin: 0 30px 0 0;
+}
 
-nav ul {
-  list-style: none;
-  text-align: center;
-}
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  display: block;
-  padding: 15px;
+.menu a{
+  clear: right;
   text-decoration: none;
-  color: white;
-  font-weight: 800;
-  text-transform: uppercase;
+  color: gray;
   margin: 0 10px;
-}
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-  transition: all .5s;
-}
-nav ul li a:hover {
-  color: #555;
+  line-height: 70px;
 }
 
-nav.stroke ul li a,
-nav.fill ul li a {
-  position: relative;
-}
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
-nav.stroke ul li a:hover:after {
-  width: 100%;
+label{
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
 }
 
-nav.fill ul li a {
-  transition: all 2s;
+#toggle{
+  display:none;
 }
 
-nav.fill ul li a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
+@media only screen and (max-width: 500px){
+  label{
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu{
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .menu a{
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+
+  }
+
+  #toggle:checked + .menu{
+    display: block;
+  }
+
 }
-nav.fill ul li a:hover {
-  color: #fff;
-  z-index: 1;
-}
-nav.fill ul li a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  -webkit-animation: fill 1s forwards;
-  -moz-animation: fill 1s forwards;
-  opacity: 1;
-}
-/*einde navigation*/
+/*end navigation*/
 
 
-/* intro text*/
-.intro {
-  margin: 20px;
-  padding: 40px;
-}
 
 
-p {
-  color:white;
-	letter-spacing: .2em;
-	display: inline-block;
-	border: 4px double rgba(255,255,255,.25);
-	border-width: 4px 0;
-	padding: 1.5em 0em;
-	position: absolute;
-	top: 18%;
-	left: 50%;
-	width: 40em;
-  margin: 0 0 0 -20em;
-}
